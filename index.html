@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pauline & Ng Dental Clinic @ USJ1 — Your Neighbourhood Dentist</title>
+<title>Pauline & Ng Dental Clinic @ USJ1: Your Neighbourhood Dentist</title>
 <meta name="description" content="Family dental clinic in Taman Subang Mewah, USJ1, Subang Jaya. 4.9★ rated on Google. Book your appointment on WhatsApp.">
 <link rel="icon" type="image/png" href="assets/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,8 +15,10 @@
     --ink-soft:#2A4B52;
     --bg:#F5F7F5;
     --bg-alt:#E9EFEC;
-    --gold:#BF8A34;
-    --gold-dark:#9F7226;
+    --gold:#FFEA88;
+    --gold-dark:#F5DA5E;
+    --gold-text:#9C7A17;
+    --gold-text-dark:#7A5E10;
     --sage:#5C726C;
     --charcoal:#1B2422;
     --line:#DCE4E1;
@@ -75,8 +77,8 @@
   }
   .btn-primary{
     background:var(--gold);
-    color:#fff;
-    box-shadow:0 14px 30px -12px rgba(191,138,52,0.45);
+    color:var(--ink);
+    box-shadow:0 14px 30px -12px rgba(156,122,23,0.4);
   }
   .btn-primary:hover{ background:var(--gold-dark); transform:translateY(-2px); }
   .btn-ghost{
@@ -155,7 +157,7 @@
     content:'';
     position:absolute; left:0; bottom:-2px;
     width:0; height:2px;
-    background:var(--gold);
+    background:var(--gold-text);
     transition:width .25s ease;
   }
   nav.links a:hover::after{ width:100%; }
@@ -235,7 +237,7 @@
     font-size:13.5px;
     color:var(--sage);
   }
-  .hero-trust .stars{ color:var(--gold); letter-spacing:1px; font-size:13px; }
+  .hero-trust .stars{ color:var(--gold-text); letter-spacing:1px; font-size:13px; }
   .hero-trust strong{ color:var(--ink); font-weight:600; }
   .hero-trust .sep{ color:var(--line); }
 
@@ -301,7 +303,7 @@
     display:flex; gap:10px; align-items:flex-start;
     margin-top:26px; font-size:15px; color:var(--ink-soft); font-weight:500;
   }
-  .locate-line svg{ width:19px; height:19px; flex-shrink:0; margin-top:2px; color:var(--gold); }
+  .locate-line svg{ width:19px; height:19px; flex-shrink:0; margin-top:2px; color:var(--gold-text); }
 
   .feature-grid{
     display:grid;
@@ -321,7 +323,7 @@
     width:42px; height:42px;
     border-radius:12px;
     background:var(--bg-alt);
-    color:var(--gold);
+    color:var(--gold-text);
     display:flex; align-items:center; justify-content:center;
     margin-bottom:16px;
   }
@@ -382,10 +384,10 @@
     color:#fff;
     margin-bottom:22px;
   }
-  .doctor-avatar.p{ background:linear-gradient(135deg,#DDAA5C,var(--gold-dark)); }
+  .doctor-avatar.p{ background:linear-gradient(135deg,var(--gold-text),var(--gold-text-dark)); }
   .doctor-avatar.n{ background:linear-gradient(135deg,#2E7A73,var(--ink)); }
   .doctor-card h3{ font-size:22px; margin-bottom:4px; }
-  .doctor-card .role{ font-size:13.5px; color:var(--gold); font-weight:600; margin-bottom:16px; }
+  .doctor-card .role{ font-size:13.5px; color:var(--gold-text); font-weight:600; margin-bottom:16px; }
   .doctor-card p.bio{ font-size:15px; color:var(--charcoal); }
   .doctor-tags{ display:flex; gap:8px; flex-wrap:wrap; margin-top:18px; }
   .doctor-tags span{
@@ -396,7 +398,7 @@
     border-radius:100px;
     font-weight:500;
   }
-  .doctor-card:nth-child(2) .doctor-tags span{ background:#F6EBD8; }
+  .doctor-card:nth-child(2) .doctor-tags span{ background:#FFF6D6; }
 
   /* ---------- Reviews ---------- */
   .review-grid{
@@ -415,7 +417,7 @@
     flex-direction:column;
     gap:16px;
   }
-  .review-stars{ color:var(--gold); font-size:15px; letter-spacing:2px; }
+  .review-stars{ color:var(--gold-text); font-size:15px; letter-spacing:2px; }
   .review-card p{ font-size:15px; color:var(--charcoal); flex-grow:1; }
   .review-who{
     display:flex; align-items:center; gap:10px;
@@ -431,7 +433,7 @@
   .review-source a{
     display:inline-flex; align-items:center; gap:8px;
     font-size:14.5px; font-weight:600; color:var(--ink);
-    border-bottom:1.5px solid var(--gold);
+    border-bottom:1.5px solid var(--gold-text);
     padding-bottom:2px;
   }
 
@@ -507,6 +509,14 @@
     justify-content:space-between;
     flex-wrap:wrap;
     gap:10px;
+  }
+  .footer-disclaimer{
+    margin-top:18px;
+    padding-top:18px;
+    border-top:1px solid var(--line);
+    font-size:11.5px;
+    color:#9BB3AD;
+    text-align:center;
   }
 
   /* ---------- Floating WhatsApp ---------- */
@@ -616,7 +626,7 @@
   .gallery-progress .bar{
     height:100%;
     width:0%;
-    background:var(--gold);
+    background:var(--gold-text);
     border-radius:10px;
   }
 
@@ -714,7 +724,7 @@
 <section class="hero" id="top">
   <div class="wrap">
     <h1 class="hero-load d1">Your neighbourhood dentist, right here in USJ1.</h1>
-    <p class="lead hero-load d2">Gentle, unhurried dental care for the whole family — from routine scaling to braces for the kids — just minutes from home in Taman Subang Mewah.</p>
+    <p class="lead hero-load d2">Gentle, unhurried dental care for the whole family, from routine scaling to braces for the kids, just minutes from home in Taman Subang Mewah.</p>
     <div class="cta-row hero-load d3">
       <a href="https://wa.me/60163403382?text=Hi%20Pauline%20%26%20Ng%20Dental%20Clinic%2C%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" class="btn btn-primary">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A8.86 8.86 0 0 0 12.05 4a8.94 8.94 0 0 0-7.75 13.4L3 21l3.7-1.28a8.9 8.9 0 0 0 4.35 1.13h.02a8.94 8.94 0 0 0 6.53-15.53zM12.05 19.5a7.4 7.4 0 0 1-3.78-1.04l-.27-.16-2.8.97.94-2.73-.18-.28a7.44 7.44 0 1 1 13.85-3.85 7.4 7.4 0 0 1-7.76 7.09zm4.1-5.57c-.22-.11-1.3-.64-1.5-.72s-.35-.11-.5.11-.58.72-.7.86-.26.16-.48.05a6.1 6.1 0 0 1-1.8-1.11 6.7 6.7 0 0 1-1.24-1.55c-.13-.22 0-.34.1-.45s.22-.26.33-.39a1.5 1.5 0 0 0 .22-.37.4.4 0 0 0 0-.39c-.06-.11-.5-1.2-.68-1.65s-.36-.37-.5-.38h-.43a.82.82 0 0 0-.6.28 2.5 2.5 0 0 0-.78 1.86c0 1.1.8 2.16.91 2.31s1.58 2.41 3.83 3.38a12.9 12.9 0 0 0 1.28.47 3.08 3.08 0 0 0 1.41.09c.43-.06 1.3-.53 1.48-1.05s.19-.96.13-1.05-.2-.15-.42-.26z"/></svg>
@@ -758,7 +768,7 @@
   <div class="gallery-sticky">
     <div class="gallery-head reveal">
       <h2>Inside the clinic</h2>
-      <p>A closer look at the space — keep scrolling to slide through, real photos to replace these once available.</p>
+      <p>A closer look at the space. Keep scrolling to slide through, real photos to replace these once available.</p>
     </div>
     <div class="gallery-track" id="galleryTrack">
       <div class="gallery-slide">
@@ -797,7 +807,7 @@
         <h2>A real neighbourhood clinic, not a big impersonal chain.</h2>
       </div>
       <div class="about-copy" style="margin-top:22px;">
-        <p>Pauline &amp; Ng Dental Clinic has been quietly looking after smiles in Taman Subang Mewah — the kind of clinic where the dentist remembers your last visit and explains every step before doing it.</p>
+        <p>Pauline &amp; Ng Dental Clinic has been quietly looking after smiles in Taman Subang Mewah, the kind of clinic where the dentist remembers your last visit and explains every step before doing it.</p>
         <p>Patients consistently mention the same things: gentle hands, clear explanations with photos of your own teeth, and follow-up messages checking in after treatment. It's dentistry that feels personal, in a spot you can walk or drive to in minutes.</p>
       </div>
       <div class="locate-line">
@@ -810,7 +820,7 @@
       <div class="feature-card">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
         <h4>Gentle &amp; unhurried</h4>
-        <p>No rushing — every step is explained before it happens.</p>
+        <p>No rushing. Every step is explained before it happens.</p>
       </div>
       <div class="feature-card">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
@@ -820,7 +830,7 @@
       <div class="feature-card">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
         <h4>Transparent pricing</h4>
-        <p>You'll know the cost upfront — no surprises at checkout.</p>
+        <p>You'll know the cost upfront. No surprises at checkout.</p>
       </div>
       <div class="feature-card">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
@@ -836,7 +846,7 @@
   <div class="wrap">
     <div class="section-head center reveal">
       <h2>Dental care for every stage of life</h2>
-      <p>From a child's first check-up to grandparents' dentures — general dentistry, handled with care.</p>
+      <p>From a child's first check-up to grandparents' dentures, general dentistry handled with care.</p>
     </div>
 
     <div class="services-grid reveal-stagger">
@@ -889,7 +899,7 @@
   <div class="wrap">
     <div class="section-head reveal">
       <h2>Meet the dentists</h2>
-      <p>The two names behind every appointment — familiar faces you'll see visit after visit.</p>
+      <p>The two names behind every appointment, familiar faces you'll see visit after visit.</p>
     </div>
 
     <div class="doctor-grid reveal">
@@ -897,7 +907,7 @@
         <div class="doctor-avatar p">P</div>
         <h3>Dr. Pauline</h3>
         <div class="role">Dentist &amp; Co-Founder</div>
-        <p class="bio">Known by patients for calm, careful teeth cleaning and check-ups, Dr. Pauline takes the time to walk through what she sees and why — so nothing feels like a surprise.</p>
+        <p class="bio">Known by patients for calm, careful teeth cleaning and check-ups, Dr. Pauline takes the time to walk through what she sees and why, so nothing feels like a surprise.</p>
         <div class="doctor-tags">
           <span>General Dentistry</span>
           <span>Preventive Care</span>
@@ -924,13 +934,13 @@
   <div class="wrap">
     <div class="section-head center reveal">
       <h2>What patients are saying</h2>
-      <p>4.9 out of 5, based on 79 reviews on Google — a few of the recurring themes, in their own words.</p>
+      <p>4.9 out of 5, based on 79 reviews on Google. A few of the recurring themes, in their own words.</p>
     </div>
 
     <div class="review-grid reveal-stagger">
       <div class="review-card">
         <div class="review-stars">★★★★★</div>
-        <p>Clean, calming and aesthetic clinic — the doctor talked me through every step of my extraction and filling, and the pricing was clear from the start.</p>
+        <p>Clean, calming and aesthetic clinic. The doctor talked me through every step of my extraction and filling, and the pricing was clear from the start.</p>
         <div class="review-who"><span class="dot">NF</span> Nur Farhana M.</div>
       </div>
       <div class="review-card">
@@ -940,7 +950,7 @@
       </div>
       <div class="review-card">
         <div class="review-stars">★★★★★</div>
-        <p>Got to pick my own music during a tooth extraction to help me relax — and they followed up afterwards to check how I was recovering.</p>
+        <p>Got to pick my own music during a tooth extraction to help me relax, and they followed up afterwards to check how I was recovering.</p>
         <div class="review-who"><span class="dot">JL</span> J. Lim</div>
       </div>
       <div class="review-card">
@@ -990,7 +1000,7 @@
 <section class="final-cta">
   <div class="wrap reveal">
     <h2>Toothache, check-up, or just overdue for a visit?</h2>
-    <p>Send us a message on WhatsApp — no forms, no hold music, just a real reply from the clinic.</p>
+    <p>Send us a message on WhatsApp. No forms, no hold music, just a real reply from the clinic.</p>
     <div class="cta-row">
       <a href="https://wa.me/60163403382?text=Hi%20Pauline%20%26%20Ng%20Dental%20Clinic%2C%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" class="btn btn-light">
         <svg viewBox="0 0 24 24" fill="#25D366"><path d="M17.6 6.32A8.86 8.86 0 0 0 12.05 4a8.94 8.94 0 0 0-7.75 13.4L3 21l3.7-1.28a8.9 8.9 0 0 0 4.35 1.13h.02a8.94 8.94 0 0 0 6.53-15.53zM12.05 19.5a7.4 7.4 0 0 1-3.78-1.04l-.27-.16-2.8.97.94-2.73-.18-.28a7.44 7.44 0 1 1 13.85-3.85 7.4 7.4 0 0 1-7.76 7.09z"/></svg>
@@ -1024,6 +1034,7 @@
       <span>© 2026 Pauline &amp; Ng Dental Clinic. All rights reserved.</span>
       <span>39, Jalan USJ 1/1a, Taman Subang Mewah, 47620 Subang Jaya, Selangor</span>
     </div>
+    <div class="footer-disclaimer">Prototype design. Content and figures shown are for illustration and subject to confirmation.</div>
   </div>
 </footer>
 
