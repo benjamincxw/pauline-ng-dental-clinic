@@ -5,23 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pauline & Ng Dental Clinic @ USJ1 — Your Neighbourhood Dentist</title>
 <meta name="description" content="Family dental clinic in Taman Subang Mewah, USJ1, Subang Jaya. 4.9★ rated on Google. Book your appointment on WhatsApp.">
-<link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+<link rel="icon" type="image/png" href="assets/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#0F3D3E;
-    --ink-soft:#17504F;
-    --bg:#FBF9F6;
-    --bg-alt:#EAF3EF;
-    --coral:#FF6B4A;
-    --coral-dark:#E85A3B;
-    --sage:#5E7D76;
-    --charcoal:#1C2422;
-    --line:#D8E6E1;
+    --ink:#14313A;
+    --ink-soft:#2A4B52;
+    --bg:#F5F7F5;
+    --bg-alt:#E9EFEC;
+    --gold:#BF8A34;
+    --gold-dark:#9F7226;
+    --sage:#5C726C;
+    --charcoal:#1B2422;
+    --line:#DCE4E1;
     --white:#FFFFFF;
-    --shadow: 0 20px 50px -25px rgba(15,61,62,0.35);
+    --shadow: 0 20px 50px -25px rgba(20,49,58,0.35);
     --logo-navy:#1D6FA6;
     --logo-teal:#4FA8DE;
   }
@@ -74,11 +74,11 @@
     white-space:nowrap;
   }
   .btn-primary{
-    background:var(--coral);
+    background:var(--gold);
     color:#fff;
-    box-shadow:0 14px 30px -12px rgba(255,107,74,0.6);
+    box-shadow:0 14px 30px -12px rgba(191,138,52,0.45);
   }
-  .btn-primary:hover{ background:var(--coral-dark); transform:translateY(-2px); }
+  .btn-primary:hover{ background:var(--gold-dark); transform:translateY(-2px); }
   .btn-ghost{
     background:transparent;
     color:var(--ink);
@@ -97,14 +97,14 @@
     position:fixed;
     top:0; left:0; right:0;
     z-index:100;
-    background:rgba(251,249,246,0.85);
+    background:rgba(245,247,245,0.85);
     backdrop-filter:blur(10px);
     border-bottom:1px solid transparent;
     transition:border-color .3s ease, box-shadow .3s ease;
   }
   header.scrolled{
     border-bottom:1px solid var(--line);
-    box-shadow:0 4px 20px rgba(15,61,62,0.05);
+    box-shadow:0 4px 20px rgba(20,49,58,0.05);
   }
   .nav-inner{
     display:flex;
@@ -126,12 +126,11 @@
     line-height:1.1;
   }
   .logo-mark{
-    width:38px; height:38px;
+    width:44px; height:44px;
     flex-shrink:0;
-    border-radius:9px;
-    object-fit:cover;
+    object-fit:contain;
   }
-  footer .logo-mark{ width:34px; height:34px; }
+  footer .logo-mark{ width:38px; height:38px; }
   .logo strong{
     font-family:'Fraunces', serif;
     font-size:20px;
@@ -156,7 +155,7 @@
     content:'';
     position:absolute; left:0; bottom:-2px;
     width:0; height:2px;
-    background:var(--coral);
+    background:var(--gold);
     transition:width .25s ease;
   }
   nav.links a:hover::after{ width:100%; }
@@ -184,7 +183,7 @@
       gap:0;
       background:var(--bg);
       border-bottom:1px solid var(--line);
-      box-shadow:0 16px 30px -18px rgba(15,61,62,0.25);
+      box-shadow:0 16px 30px -18px rgba(20,49,58,0.25);
       padding:8px 28px 18px;
     }
     nav.links.open{ display:flex; }
@@ -196,70 +195,49 @@
 
   /* ---------- Hero ---------- */
   .hero{
-    padding:158px 0 90px;
+    padding:150px 0 88px;
     position:relative;
-    overflow:hidden;
   }
-  .hero .wrap{
-    max-width:700px;
-    text-align:center;
-  }
+  @media(max-width:768px){ .hero{ padding:130px 0 60px; } }
 
-  .eyebrow-badge{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    background:var(--bg-alt);
-    border:1px solid var(--line);
-    padding:8px 16px 8px 8px;
-    border-radius:100px;
-    font-size:13.5px;
-    font-weight:600;
-    color:var(--ink);
-    margin-bottom:26px;
-  }
-  .eyebrow-badge .stars{ color:#F5A524; letter-spacing:1px; font-size:13px; }
-  .eyebrow-badge .pip{
-    background:var(--ink);
-    color:#fff;
-    width:22px; height:22px;
-    border-radius:50%;
-    display:flex; align-items:center; justify-content:center;
-    font-size:11px;
+  .hero .wrap{
+    max-width:600px;
+    margin:0;
+    text-align:left;
   }
 
   .hero h1{
-    font-size:clamp(34px, 4.6vw, 56px);
-    margin:0 auto;
+    font-size:clamp(32px, 4.2vw, 50px);
     letter-spacing:-0.01em;
   }
-  .hero h1 .accent{ color:var(--coral); }
 
   .hero p.lead{
-    margin:22px auto 0;
-    font-size:17.5px;
+    margin-top:20px;
+    font-size:17px;
     color:var(--sage);
-    max-width:460px;
+    max-width:470px;
   }
 
   .hero .cta-row{
-    margin-top:34px;
+    margin-top:32px;
     display:flex;
     gap:14px;
     flex-wrap:wrap;
-    justify-content:center;
+    justify-content:flex-start;
   }
 
-  .hero .micro-note{
-    margin-top:22px;
-    font-size:13.5px;
-    color:var(--sage);
+  .hero-trust{
+    margin-top:28px;
     display:flex;
     align-items:center;
-    justify-content:center;
+    flex-wrap:wrap;
     gap:8px;
+    font-size:13.5px;
+    color:var(--sage);
   }
-  .hero .micro-note svg{ width:16px; height:16px; color:var(--coral); }
+  .hero-trust .stars{ color:var(--gold); letter-spacing:1px; font-size:13px; }
+  .hero-trust strong{ color:var(--ink); font-weight:600; }
+  .hero-trust .sep{ color:var(--line); }
 
   /* ---------- Trust Strip ---------- */
   .trust-strip{
@@ -323,7 +301,7 @@
     display:flex; gap:10px; align-items:flex-start;
     margin-top:26px; font-size:15px; color:var(--ink-soft); font-weight:500;
   }
-  .locate-line svg{ width:19px; height:19px; flex-shrink:0; margin-top:2px; color:var(--coral); }
+  .locate-line svg{ width:19px; height:19px; flex-shrink:0; margin-top:2px; color:var(--gold); }
 
   .feature-grid{
     display:grid;
@@ -343,7 +321,7 @@
     width:42px; height:42px;
     border-radius:12px;
     background:var(--bg-alt);
-    color:var(--coral);
+    color:var(--gold);
     display:flex; align-items:center; justify-content:center;
     margin-bottom:16px;
   }
@@ -404,10 +382,10 @@
     color:#fff;
     margin-bottom:22px;
   }
-  .doctor-avatar.p{ background:linear-gradient(135deg,#FF8A6B,var(--coral-dark)); }
+  .doctor-avatar.p{ background:linear-gradient(135deg,#DDAA5C,var(--gold-dark)); }
   .doctor-avatar.n{ background:linear-gradient(135deg,#2E7A73,var(--ink)); }
   .doctor-card h3{ font-size:22px; margin-bottom:4px; }
-  .doctor-card .role{ font-size:13.5px; color:var(--coral); font-weight:600; margin-bottom:16px; }
+  .doctor-card .role{ font-size:13.5px; color:var(--gold); font-weight:600; margin-bottom:16px; }
   .doctor-card p.bio{ font-size:15px; color:var(--charcoal); }
   .doctor-tags{ display:flex; gap:8px; flex-wrap:wrap; margin-top:18px; }
   .doctor-tags span{
@@ -418,7 +396,7 @@
     border-radius:100px;
     font-weight:500;
   }
-  .doctor-card:nth-child(2) .doctor-tags span{ background:#FFF1EC; }
+  .doctor-card:nth-child(2) .doctor-tags span{ background:#F6EBD8; }
 
   /* ---------- Reviews ---------- */
   .review-grid{
@@ -437,7 +415,7 @@
     flex-direction:column;
     gap:16px;
   }
-  .review-stars{ color:#F5A524; font-size:15px; letter-spacing:2px; }
+  .review-stars{ color:var(--gold); font-size:15px; letter-spacing:2px; }
   .review-card p{ font-size:15px; color:var(--charcoal); flex-grow:1; }
   .review-who{
     display:flex; align-items:center; gap:10px;
@@ -453,7 +431,7 @@
   .review-source a{
     display:inline-flex; align-items:center; gap:8px;
     font-size:14.5px; font-weight:600; color:var(--ink);
-    border-bottom:1.5px solid var(--coral);
+    border-bottom:1.5px solid var(--gold);
     padding-bottom:2px;
   }
 
@@ -481,7 +459,7 @@
     font-size:15px;
     color:#DCEAE7;
   }
-  .loc-row svg{ width:20px; height:20px; flex-shrink:0; margin-top:2px; color:var(--coral); }
+  .loc-row svg{ width:20px; height:20px; flex-shrink:0; margin-top:2px; color:var(--gold); }
   .loc-row strong{ display:block; color:#fff; font-size:13px; text-transform:none; margin-bottom:3px; font-weight:600;}
   .map-frame{
     border-radius:22px;
@@ -493,7 +471,7 @@
 
   /* ---------- Final CTA ---------- */
   .final-cta{
-    background:linear-gradient(135deg, var(--ink) 0%, #0B2E2F 100%);
+    background:linear-gradient(135deg, var(--ink) 0%, #0B2429 100%);
     color:#fff;
     text-align:center;
     position:relative;
@@ -638,7 +616,7 @@
   .gallery-progress .bar{
     height:100%;
     width:0%;
-    background:var(--coral);
+    background:var(--gold);
     border-radius:10px;
   }
 
@@ -702,7 +680,7 @@
 <header id="siteHeader">
   <div class="nav-inner">
     <a href="#top" class="logo">
-      <img class="logo-mark" src="assets/logo.jpg" alt="Pauline & Ng Dental Clinic logo">
+      <img class="logo-mark" src="assets/logo.png" alt="Pauline & Ng Dental Clinic logo">
       <span class="logo-text">
         <strong>Pauline &amp; Ng</strong>
         <span>Dental Clinic · USJ1</span>
@@ -735,23 +713,20 @@
 <!-- ================= HERO ================= -->
 <section class="hero" id="top">
   <div class="wrap">
-    <div class="eyebrow-badge hero-load d1">
-      <span class="pip">✓</span>
-      <span class="stars">★★★★★</span>
-      4.9 rated on Google · 79 reviews
-    </div>
-    <h1 class="hero-load d2">Your neighbourhood dentist, right here in <span class="accent">USJ1.</span></h1>
-    <p class="lead hero-load d3">Gentle, unhurried dental care for the whole family — from routine scaling to braces for the kids — just minutes from home in Taman Subang Mewah.</p>
-    <div class="cta-row hero-load d4">
+    <h1 class="hero-load d1">Your neighbourhood dentist, right here in USJ1.</h1>
+    <p class="lead hero-load d2">Gentle, unhurried dental care for the whole family — from routine scaling to braces for the kids — just minutes from home in Taman Subang Mewah.</p>
+    <div class="cta-row hero-load d3">
       <a href="https://wa.me/60163403382?text=Hi%20Pauline%20%26%20Ng%20Dental%20Clinic%2C%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" class="btn btn-primary">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A8.86 8.86 0 0 0 12.05 4a8.94 8.94 0 0 0-7.75 13.4L3 21l3.7-1.28a8.9 8.9 0 0 0 4.35 1.13h.02a8.94 8.94 0 0 0 6.53-15.53zM12.05 19.5a7.4 7.4 0 0 1-3.78-1.04l-.27-.16-2.8.97.94-2.73-.18-.28a7.44 7.44 0 1 1 13.85-3.85 7.4 7.4 0 0 1-7.76 7.09zm4.1-5.57c-.22-.11-1.3-.64-1.5-.72s-.35-.11-.5.11-.58.72-.7.86-.26.16-.48.05a6.1 6.1 0 0 1-1.8-1.11 6.7 6.7 0 0 1-1.24-1.55c-.13-.22 0-.34.1-.45s.22-.26.33-.39a1.5 1.5 0 0 0 .22-.37.4.4 0 0 0 0-.39c-.06-.11-.5-1.2-.68-1.65s-.36-.37-.5-.38h-.43a.82.82 0 0 0-.6.28 2.5 2.5 0 0 0-.78 1.86c0 1.1.8 2.16.91 2.31s1.58 2.41 3.83 3.38a12.9 12.9 0 0 0 1.28.47 3.08 3.08 0 0 0 1.41.09c.43-.06 1.3-.53 1.48-1.05s.19-.96.13-1.05-.2-.15-.42-.26z"/></svg>
         Book on WhatsApp
       </a>
       <a href="tel:+60163403382" class="btn btn-ghost">Call +60 16-340 3382</a>
     </div>
-    <div class="micro-note hero-load d5">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-      Usually replies within the hour on WhatsApp
+    <div class="hero-trust hero-load d4">
+      <span class="stars">★★★★★</span>
+      <span><strong>4.9</strong> on Google (79 reviews)</span>
+      <span class="sep">·</span>
+      <span>Usually replies within the hour on WhatsApp</span>
     </div>
   </div>
 </section>
@@ -772,8 +747,8 @@
       <div class="lbl">Taman Subang Mewah</div>
     </div>
     <div class="trust-item">
-      <div class="num">👨‍👩‍👧‍👦</div>
-      <div class="lbl">Family &amp; kids welcome</div>
+      <div class="num">Family-run</div>
+      <div class="lbl">Kids &amp; parents welcome</div>
     </div>
   </div>
 </section>
@@ -1031,7 +1006,7 @@
   <div class="wrap">
     <div class="footer-inner">
       <div class="logo">
-        <img class="logo-mark" src="assets/logo.jpg" alt="Pauline & Ng Dental Clinic logo">
+        <img class="logo-mark" src="assets/logo.png" alt="Pauline & Ng Dental Clinic logo">
         <span class="logo-text">
           <strong>Pauline &amp; Ng Dental Clinic</strong>
           <span>USJ1, Subang Jaya · Selangor</span>
