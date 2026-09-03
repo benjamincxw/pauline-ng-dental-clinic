@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pauline & Ng Dental Clinic @ USJ1 — Your Neighbourhood Dentist</title>
+<meta name="description" content="Family dental clinic in Taman Subang Mewah, USJ1, Subang Jaya. 4.9★ rated on Google. Book your appointment on WhatsApp.">
+<link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0F3D3E;
+    --ink-soft:#17504F;
+    --bg:#FBF9F6;
+    --bg-alt:#EAF3EF;
+    --coral:#FF6B4A;
+    --coral-dark:#E85A3B;
+    --sage:#5E7D76;
+    --charcoal:#1C2422;
+    --line:#D8E6E1;
+    --white:#FFFFFF;
+    --shadow: 0 20px 50px -25px rgba(15,61,62,0.35);
+    --logo-navy:#1D6FA6;
+    --logo-teal:#4FA8DE;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    font-family:'Inter', sans-serif;
+    color:var(--charcoal);
+    background:var(--bg);
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+
+  h1,h2,h3,h4{
+    font-family:'Fraunces', serif;
+    color:var(--ink);
+    line-height:1.15;
+    font-weight:500;
+  }
+
+  a{text-decoration:none; color:inherit;}
+  ul{list-style:none;}
+  img,svg{display:block; max-width:100%;}
+
+  .wrap{
+    max-width:1160px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+
+  section{padding:110px 0;}
+  @media(max-width:768px){ section{padding:72px 0;} }
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:15px 28px;
+    border-radius:100px;
+    font-weight:600;
+    font-size:15.5px;
+    font-family:'Inter',sans-serif;
+    border:1.5px solid transparent;
+    cursor:pointer;
+    transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
+    white-space:nowrap;
+  }
+  .btn-primary{
+    background:var(--coral);
+    color:#fff;
+    box-shadow:0 14px 30px -12px rgba(255,107,74,0.6);
+  }
+  .btn-primary:hover{ background:var(--coral-dark); transform:translateY(-2px); }
+  .btn-ghost{
+    background:transparent;
+    color:var(--ink);
+    border-color:var(--line);
+  }
+  .btn-ghost:hover{ border-color:var(--ink); transform:translateY(-2px); }
+  .btn-light{
+    background:#fff;
+    color:var(--ink);
+  }
+  .btn-light:hover{ transform:translateY(-2px); box-shadow:var(--shadow); }
+  .btn svg{width:19px; height:19px; flex-shrink:0;}
+
+  /* ---------- Header ---------- */
+  header{
+    position:fixed;
+    top:0; left:0; right:0;
+    z-index:100;
+    background:rgba(251,249,246,0.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid transparent;
+    transition:border-color .3s ease, box-shadow .3s ease;
+  }
+  header.scrolled{
+    border-bottom:1px solid var(--line);
+    box-shadow:0 4px 20px rgba(15,61,62,0.05);
+  }
+  .nav-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:14px 28px;
+    max-width:1160px;
+    margin:0 auto;
+  }
+  .logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    line-height:1.1;
+  }
+  .logo-text{
+    display:flex;
+    flex-direction:column;
+    line-height:1.1;
+  }
+  .logo-mark{
+    width:38px; height:38px;
+    flex-shrink:0;
+    border-radius:9px;
+    object-fit:cover;
+  }
+  footer .logo-mark{ width:34px; height:34px; }
+  .logo strong{
+    font-family:'Fraunces', serif;
+    font-size:20px;
+    font-weight:600;
+    color:var(--ink);
+  }
+  .logo span{
+    font-size:11.5px;
+    color:var(--sage);
+    letter-spacing:.03em;
+    margin-top:2px;
+  }
+  nav.links{ display:flex; gap:34px; }
+  nav.links a{
+    font-size:14.5px;
+    font-weight:500;
+    color:var(--charcoal);
+    position:relative;
+    padding:4px 0;
+  }
+  nav.links a::after{
+    content:'';
+    position:absolute; left:0; bottom:-2px;
+    width:0; height:2px;
+    background:var(--coral);
+    transition:width .25s ease;
+  }
+  nav.links a:hover::after{ width:100%; }
+  .header-cta{ display:flex; align-items:center; gap:14px; }
+
+  .burger{
+    display:none;
+    width:42px; height:42px;
+    border-radius:10px;
+    border:1.5px solid var(--line);
+    background:transparent;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    flex-shrink:0;
+  }
+  .burger svg{ width:20px; height:20px; color:var(--ink); }
+
+  @media(max-width:860px){
+    nav.links{
+      display:none;
+      position:absolute;
+      top:100%; left:0; right:0;
+      flex-direction:column;
+      gap:0;
+      background:var(--bg);
+      border-bottom:1px solid var(--line);
+      box-shadow:0 16px 30px -18px rgba(15,61,62,0.25);
+      padding:8px 28px 18px;
+    }
+    nav.links.open{ display:flex; }
+    nav.links a{ padding:12px 0; border-bottom:1px solid var(--line); }
+    nav.links a:last-child{ border-bottom:none; }
+    .header-cta .btn-ghost{ display:none; }
+    .burger{ display:flex; }
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    padding:158px 0 90px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero .wrap{
+    max-width:700px;
+    text-align:center;
+  }
+
+  .eyebrow-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:var(--bg-alt);
+    border:1px solid var(--line);
+    padding:8px 16px 8px 8px;
+    border-radius:100px;
+    font-size:13.5px;
+    font-weight:600;
+    color:var(--ink);
+    margin-bottom:26px;
+  }
+  .eyebrow-badge .stars{ color:#F5A524; letter-spacing:1px; font-size:13px; }
+  .eyebrow-badge .pip{
+    background:var(--ink);
+    color:#fff;
+    width:22px; height:22px;
+    border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    font-size:11px;
+  }
+
+  .hero h1{
+    font-size:clamp(34px, 4.6vw, 56px);
+    margin:0 auto;
+    letter-spacing:-0.01em;
+  }
+  .hero h1 .accent{ color:var(--coral); }
+
+  .hero p.lead{
+    margin:22px auto 0;
+    font-size:17.5px;
+    color:var(--sage);
+    max-width:460px;
+  }
+
+  .hero .cta-row{
+    margin-top:34px;
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .hero .micro-note{
+    margin-top:22px;
+    font-size:13.5px;
+    color:var(--sage);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+  }
+  .hero .micro-note svg{ width:16px; height:16px; color:var(--coral); }
+
+  /* ---------- Trust Strip ---------- */
+  .trust-strip{
+    background:var(--ink);
+    padding:0;
+  }
+  .trust-strip .wrap{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    padding:0;
+  }
+  .trust-item{
+    padding:34px 20px;
+    text-align:center;
+    border-right:1px solid rgba(255,255,255,0.1);
+  }
+  .trust-item:last-child{ border-right:none; }
+  .trust-item .num{
+    font-family:'Fraunces', serif;
+    font-size:30px;
+    color:#fff;
+    font-weight:600;
+  }
+  .trust-item .lbl{
+    font-size:13px;
+    color:#B9D2CC;
+    margin-top:6px;
+  }
+  @media(max-width:700px){
+    .trust-strip .wrap{ grid-template-columns:repeat(2,1fr); }
+    .trust-item{ border-bottom:1px solid rgba(255,255,255,0.1); }
+  }
+
+  /* ---------- Section heads ---------- */
+  .section-head{
+    max-width:600px;
+    margin-bottom:56px;
+  }
+  .section-head.center{ margin-left:auto; margin-right:auto; text-align:center; }
+  .section-head h2{
+    font-size:clamp(28px,3.4vw,40px);
+  }
+  .section-head p{
+    margin-top:14px;
+    color:var(--sage);
+    font-size:16.5px;
+  }
+
+  /* ---------- About ---------- */
+  .about{ background:var(--bg-alt); }
+  .about .wrap{
+    display:grid;
+    grid-template-columns:0.9fr 1.1fr;
+    gap:70px;
+    align-items:start;
+  }
+  @media(max-width:860px){ .about .wrap{ grid-template-columns:1fr; gap:34px; } }
+  .about-copy p{ color:var(--charcoal); font-size:16px; margin-bottom:16px; }
+  .about-copy p:last-child{ margin-bottom:0; }
+  .locate-line{
+    display:flex; gap:10px; align-items:flex-start;
+    margin-top:26px; font-size:15px; color:var(--ink-soft); font-weight:500;
+  }
+  .locate-line svg{ width:19px; height:19px; flex-shrink:0; margin-top:2px; color:var(--coral); }
+
+  .feature-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+  }
+  @media(max-width:520px){ .feature-grid{ grid-template-columns:1fr; } }
+  .feature-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:26px 22px;
+    transition:transform .3s ease, box-shadow .3s ease;
+  }
+  .feature-card:hover{ transform:translateY(-4px); box-shadow:var(--shadow); }
+  .feature-card .ic{
+    width:42px; height:42px;
+    border-radius:12px;
+    background:var(--bg-alt);
+    color:var(--coral);
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom:16px;
+  }
+  .feature-card .ic svg{ width:22px; height:22px; }
+  .feature-card h4{ font-size:16.5px; margin-bottom:6px; font-weight:600; color:var(--ink);}
+  .feature-card p{ font-size:14px; color:var(--sage); }
+
+  /* ---------- Services ---------- */
+  .services-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    border-radius:20px;
+    overflow:hidden;
+  }
+  @media(max-width:900px){ .services-grid{ grid-template-columns:repeat(2,1fr); } }
+  @media(max-width:520px){ .services-grid{ grid-template-columns:1fr; } }
+  .service-tile{
+    background:#fff;
+    padding:34px 26px;
+    transition:background .3s ease;
+  }
+  .service-tile:hover{ background:var(--bg-alt); }
+  .service-tile .ic{
+    width:38px; height:38px;
+    color:var(--ink);
+    margin-bottom:18px;
+  }
+  .service-tile .ic svg{ width:100%; height:100%; }
+  .service-tile h4{ font-size:16px; font-weight:600; color:var(--ink); margin-bottom:6px; }
+  .service-tile p{ font-size:13.5px; color:var(--sage); }
+
+  /* ---------- Doctors ---------- */
+  .doctors{ background:var(--bg-alt); }
+  .doctor-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+  }
+  @media(max-width:760px){ .doctor-grid{ grid-template-columns:1fr; } }
+  .doctor-card{
+    background:#fff;
+    border-radius:22px;
+    padding:38px 32px;
+    border:1px solid var(--line);
+    transition:transform .3s ease, box-shadow .3s ease;
+  }
+  .doctor-card:hover{ transform:translateY(-5px); box-shadow:var(--shadow); }
+  .doctor-avatar{
+    width:74px; height:74px;
+    border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Fraunces', serif;
+    font-size:26px;
+    font-weight:600;
+    color:#fff;
+    margin-bottom:22px;
+  }
+  .doctor-avatar.p{ background:linear-gradient(135deg,#FF8A6B,var(--coral-dark)); }
+  .doctor-avatar.n{ background:linear-gradient(135deg,#2E7A73,var(--ink)); }
+  .doctor-card h3{ font-size:22px; margin-bottom:4px; }
+  .doctor-card .role{ font-size:13.5px; color:var(--coral); font-weight:600; margin-bottom:16px; }
+  .doctor-card p.bio{ font-size:15px; color:var(--charcoal); }
+  .doctor-tags{ display:flex; gap:8px; flex-wrap:wrap; margin-top:18px; }
+  .doctor-tags span{
+    font-size:12.5px;
+    background:var(--bg-alt);
+    color:var(--ink-soft);
+    padding:6px 12px;
+    border-radius:100px;
+    font-weight:500;
+  }
+  .doctor-card:nth-child(2) .doctor-tags span{ background:#FFF1EC; }
+
+  /* ---------- Reviews ---------- */
+  .review-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+  }
+  @media(max-width:900px){ .review-grid{ grid-template-columns:1fr 1fr; } }
+  @media(max-width:600px){ .review-grid{ grid-template-columns:1fr; } }
+  .review-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:28px 26px;
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+  }
+  .review-stars{ color:#F5A524; font-size:15px; letter-spacing:2px; }
+  .review-card p{ font-size:15px; color:var(--charcoal); flex-grow:1; }
+  .review-who{
+    display:flex; align-items:center; gap:10px;
+    font-size:13.5px; color:var(--sage); font-weight:600;
+  }
+  .review-who .dot{
+    width:32px;height:32px;border-radius:50%;
+    background:var(--bg-alt); color:var(--ink);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Fraunces',serif; font-size:13px; font-weight:600;
+  }
+  .review-source{ margin-top:40px; text-align:center; }
+  .review-source a{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:14.5px; font-weight:600; color:var(--ink);
+    border-bottom:1.5px solid var(--coral);
+    padding-bottom:2px;
+  }
+
+  /* ---------- Location ---------- */
+  .location .wrap{
+    display:grid;
+    grid-template-columns:0.85fr 1.15fr;
+    gap:44px;
+    align-items:stretch;
+  }
+  @media(max-width:860px){ .location .wrap{ grid-template-columns:1fr; } }
+  .loc-card{
+    background:var(--ink);
+    color:#fff;
+    border-radius:22px;
+    padding:40px 34px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+  }
+  .loc-card h3{ color:#fff; font-size:24px; margin-bottom:22px; }
+  .loc-row{
+    display:flex; gap:14px; align-items:flex-start;
+    margin-bottom:20px;
+    font-size:15px;
+    color:#DCEAE7;
+  }
+  .loc-row svg{ width:20px; height:20px; flex-shrink:0; margin-top:2px; color:var(--coral); }
+  .loc-row strong{ display:block; color:#fff; font-size:13px; text-transform:none; margin-bottom:3px; font-weight:600;}
+  .map-frame{
+    border-radius:22px;
+    overflow:hidden;
+    border:1px solid var(--line);
+    min-height:340px;
+  }
+  .map-frame iframe{ width:100%; height:100%; min-height:340px; border:0; display:block; }
+
+  /* ---------- Final CTA ---------- */
+  .final-cta{
+    background:linear-gradient(135deg, var(--ink) 0%, #0B2E2F 100%);
+    color:#fff;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+  }
+  .final-cta h2{ color:#fff; font-size:clamp(28px,4vw,42px); max-width:620px; margin:0 auto; }
+  .final-cta p{ color:#B9D2CC; margin-top:16px; font-size:16.5px; }
+  .final-cta .cta-row{
+    margin-top:34px;
+    display:flex; gap:14px; justify-content:center; flex-wrap:wrap;
+  }
+
+  /* ---------- Footer ---------- */
+  footer{ padding:52px 0 30px; }
+  .footer-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    gap:24px;
+    border-top:1px solid var(--line);
+    padding-top:34px;
+  }
+  .footer-inner .logo strong{ font-size:18px; }
+  .footer-links{ display:flex; gap:26px; flex-wrap:wrap; }
+  .footer-links a{ font-size:14px; color:var(--sage); font-weight:500; }
+  .footer-links a:hover{ color:var(--ink); }
+  .footer-bottom{
+    margin-top:30px;
+    font-size:12.5px;
+    color:#9BB3AD;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+
+  /* ---------- Floating WhatsApp ---------- */
+  .float-wa{
+    position:fixed;
+    bottom:26px; right:26px;
+    z-index:200;
+    width:60px; height:60px;
+    border-radius:50%;
+    background:#25D366;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 12px 30px -8px rgba(37,211,102,0.6);
+    transition:transform .25s ease;
+  }
+  .float-wa:hover{ transform:scale(1.08); }
+  .float-wa svg{ width:30px; height:30px; color:#fff; }
+  .float-wa .ring{
+    position:absolute;
+    width:60px; height:60px;
+    border-radius:50%;
+    border:2px solid #25D366;
+    animation:pulse-ring 2.2s ease-out infinite;
+  }
+  @keyframes pulse-ring{
+    0%{ transform:scale(1); opacity:.7; }
+    100%{ transform:scale(1.7); opacity:0; }
+  }
+
+  /* ---------- Gallery (horizontal scroll-jack) ---------- */
+  .gallery-scroll{
+    position:relative;
+    height:260vh;
+  }
+  .gallery-sticky{
+    position:sticky;
+    top:0;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    overflow:hidden;
+    background:var(--bg-alt);
+  }
+  .gallery-head{
+    padding:0 28px;
+    max-width:1160px;
+    margin:0 auto 30px;
+    width:100%;
+  }
+  .gallery-head h2{ font-size:clamp(26px,3.2vw,38px); }
+  .gallery-head p{ color:var(--sage); margin-top:10px; font-size:16px; max-width:520px; }
+  .gallery-track{
+    display:flex;
+    gap:26px;
+    padding:0 28px;
+    will-change:transform;
+  }
+  .gallery-slide{
+    flex:0 0 auto;
+    width:min(640px,80vw);
+  }
+  .slide-ph{
+    width:100%;
+    height:min(58vh,460px);
+    border-radius:22px;
+    background:linear-gradient(135deg,var(--c1),var(--c2));
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:16px;
+    color:#fff;
+    box-shadow:var(--shadow);
+    position:relative;
+    overflow:hidden;
+  }
+  .slide-ph::after{
+    content:'';
+    position:absolute; inset:0;
+    background:radial-gradient(circle at 80% 15%, rgba(255,255,255,0.18), transparent 55%);
+  }
+  .cam-ic{ width:52px; height:52px; opacity:.9; }
+  .slide-ph span.slide-title{
+    font-family:'Fraunces', serif;
+    font-size:20px;
+    font-weight:500;
+  }
+  .slide-ph span.slide-note{
+    font-size:12.5px;
+    background:rgba(255,255,255,0.18);
+    padding:6px 14px;
+    border-radius:100px;
+    font-weight:500;
+  }
+  .gallery-progress{
+    max-width:1160px;
+    margin:26px auto 0;
+    padding:0 28px;
+    width:100%;
+  }
+  .gallery-progress .track-line{
+    height:3px;
+    background:var(--line);
+    border-radius:10px;
+    overflow:hidden;
+  }
+  .gallery-progress .bar{
+    height:100%;
+    width:0%;
+    background:var(--coral);
+    border-radius:10px;
+  }
+
+  @media (max-width:700px){
+    .gallery-scroll{ height:auto; }
+    .gallery-sticky{ position:relative; height:auto; padding:72px 0; }
+    .gallery-track{ overflow-x:auto; scroll-snap-type:x mandatory; padding-bottom:14px; transform:none !important; }
+    .gallery-slide{ scroll-snap-align:start; width:82vw; }
+    .gallery-progress{ display:none; }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .gallery-scroll{ height:auto; }
+    .gallery-sticky{ position:relative; height:auto; padding:72px 0; }
+    .gallery-track{ overflow-x:auto; scroll-snap-type:x mandatory; transform:none !important; }
+    .gallery-slide{ scroll-snap-align:start; }
+    .gallery-progress{ display:none; }
+  }
+
+  /* ---------- Reveal on scroll ---------- */
+  .reveal{
+    opacity:0;
+    transform:translateY(22px);
+    transition:opacity .7s ease, transform .7s ease;
+  }
+  .reveal.in-view{ opacity:1; transform:translateY(0); }
+  .reveal-stagger > *{
+    opacity:0;
+    transform:translateY(18px);
+    transition:opacity .6s ease, transform .6s ease;
+  }
+  .reveal-stagger.in-view > *{ opacity:1; transform:translateY(0); }
+  .reveal-stagger.in-view > *:nth-child(1){ transition-delay:.05s; }
+  .reveal-stagger.in-view > *:nth-child(2){ transition-delay:.12s; }
+  .reveal-stagger.in-view > *:nth-child(3){ transition-delay:.19s; }
+  .reveal-stagger.in-view > *:nth-child(4){ transition-delay:.26s; }
+  .reveal-stagger.in-view > *:nth-child(5){ transition-delay:.33s; }
+  .reveal-stagger.in-view > *:nth-child(6){ transition-delay:.4s; }
+  .reveal-stagger.in-view > *:nth-child(7){ transition-delay:.47s; }
+  .reveal-stagger.in-view > *:nth-child(8){ transition-delay:.54s; }
+
+  .hero-load{
+    opacity:0; transform:translateY(16px);
+    animation:heroIn .7s ease forwards;
+  }
+  .hero-load.d1{ animation-delay:.05s; }
+  .hero-load.d2{ animation-delay:.16s; }
+  .hero-load.d3{ animation-delay:.27s; }
+  .hero-load.d4{ animation-delay:.38s; }
+  .hero-load.d5{ animation-delay:.5s; }
+  @keyframes heroIn{ to{ opacity:1; transform:translateY(0); } }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation:none !important; transition:none !important; }
+    .reveal, .reveal-stagger > *, .hero-load{ opacity:1 !important; transform:none !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header id="siteHeader">
+  <div class="nav-inner">
+    <a href="#top" class="logo">
+      <img class="logo-mark" src="assets/logo.jpg" alt="Pauline & Ng Dental Clinic logo">
+      <span class="logo-text">
+        <strong>Pauline &amp; Ng</strong>
+        <span>Dental Clinic · USJ1</span>
+      </span>
+    </a>
+    <nav class="links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#services">Services</a>
+      <a href="#doctors">Dentists</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#location">Location</a>
+    </nav>
+    <div class="header-cta">
+      <a href="tel:+60163403382" class="btn btn-ghost">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call
+      </a>
+      <a href="https://wa.me/60163403382?text=Hi%20Pauline%20%26%20Ng%20Dental%20Clinic%2C%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" class="btn btn-primary">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A8.86 8.86 0 0 0 12.05 4a8.94 8.94 0 0 0-7.75 13.4L3 21l3.7-1.28a8.9 8.9 0 0 0 4.35 1.13h.02a8.94 8.94 0 0 0 6.53-15.53zM12.05 19.5a7.4 7.4 0 0 1-3.78-1.04l-.27-.16-2.8.97.94-2.73-.18-.28a7.44 7.44 0 1 1 13.85-3.85 7.4 7.4 0 0 1-7.76 7.09zm4.1-5.57c-.22-.11-1.3-.64-1.5-.72s-.35-.11-.5.11-.58.72-.7.86-.26.16-.48.05a6.1 6.1 0 0 1-1.8-1.11 6.7 6.7 0 0 1-1.24-1.55c-.13-.22 0-.34.1-.45s.22-.26.33-.39a1.5 1.5 0 0 0 .22-.37.4.4 0 0 0 0-.39c-.06-.11-.5-1.2-.68-1.65s-.36-.37-.5-.38h-.43a.82.82 0 0 0-.6.28 2.5 2.5 0 0 0-.78 1.86c0 1.1.8 2.16.91 2.31s1.58 2.41 3.83 3.38a12.9 12.9 0 0 0 1.28.47 3.08 3.08 0 0 0 1.41.09c.43-.06 1.3-.53 1.48-1.05s.19-.96.13-1.05-.2-.15-.42-.26z"/></svg>
+        Book Now
+      </a>
+      <button class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <svg id="burgerIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="eyebrow-badge hero-load d1">
+      <span class="pip">✓</span>
+      <span class="stars">★★★★★</span>
+      4.9 rated on Google · 79 reviews
+    </div>
+    <h1 class="hero-load d2">Your neighbourhood dentist, right here in <span class="accent">USJ1.</span></h1>
+    <p class="lead hero-load d3">Gentle, unhurried dental care for the whole family — from routine scaling to braces for the kids — just minutes from home in Taman Subang Mewah.</p>
+    <div class="cta-row hero-load d4">
+      <a href="https://wa.me/60163403382?text=Hi%20Pauline%20%26%20Ng%20Dental%20Clinic%2C%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" class="btn btn-primary">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A8.86 8.86 0 0 0 12.05 4a8.94 8.94 0 0 0-7.75 13.4L3 21l3.7-1.28a8.9 8.9 0 0 0 4.35 1.13h.02a8.94 8.94 0 0 0 6.53-15.53zM12.05 19.5a7.4 7.4 0 0 1-3.78-1.04l-.27-.16-2.8.97.94-2.73-.18-.28a7.44 7.44 0 1 1 13.85-3.85 7.4 7.4 0 0 1-7.76 7.09zm4.1-5.57c-.22-.11-1.3-.64-1.5-.72s-.35-.11-.5.11-.58.72-.7.86-.26.16-.48.05a6.1 6.1 0 0 1-1.8-1.11 6.7 6.7 0 0 1-1.24-1.55c-.13-.22 0-.34.1-.45s.22-.26.33-.39a1.5 1.5 0 0 0 .22-.37.4.4 0 0 0 0-.39c-.06-.11-.5-1.2-.68-1.65s-.36-.37-.5-.38h-.43a.82.82 0 0 0-.6.28 2.5 2.5 0 0 0-.78 1.86c0 1.1.8 2.16.91 2.31s1.58 2.41 3.83 3.38a12.9 12.9 0 0 0 1.28.47 3.08 3.08 0 0 0 1.41.09c.43-.06 1.3-.53 1.48-1.05s.19-.96.13-1.05-.2-.15-.42-.26z"/></svg>
+        Book on WhatsApp
+      </a>
+      <a href="tel:+60163403382" class="btn btn-ghost">Call +60 16-340 3382</a>
+    </div>
+    <div class="micro-note hero-load d5">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      Usually replies within the hour on WhatsApp
+    </div>
+  </div>
+</section>
+
+<!-- ================= TRUST STRIP ================= -->
+<section class="trust-strip" style="padding:0;">
+  <div class="wrap">
+    <div class="trust-item">
+      <div class="num" data-count="4.9" data-decimal="1">0</div>
+      <div class="lbl">★ Google rating</div>
+    </div>
+    <div class="trust-item">
+      <div class="num"><span data-count="79">0</span>+</div>
+      <div class="lbl">Patient reviews</div>
+    </div>
+    <div class="trust-item">
+      <div class="num">USJ1</div>
+      <div class="lbl">Taman Subang Mewah</div>
+    </div>
+    <div class="trust-item">
+      <div class="num">👨‍👩‍👧‍👦</div>
+      <div class="lbl">Family &amp; kids welcome</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GALLERY (horizontal scroll) ================= -->
+<section class="gallery-scroll" id="gallery">
+  <div class="gallery-sticky">
+    <div class="gallery-head reveal">
+      <h2>Inside the clinic</h2>
+      <p>A closer look at the space — keep scrolling to slide through, real photos to replace these once available.</p>
+    </div>
+    <div class="gallery-track" id="galleryTrack">
+      <div class="gallery-slide">
+        <div class="slide-ph" style="--c1:#5FB0E6;--c2:#1D6FA6;">
+          <svg class="cam-ic" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7l1.5-3h5L16 7"/><circle cx="12" cy="13.5" r="3.5"/></svg>
+          <span class="slide-title">Reception &amp; Waiting Area</span>
+          <span class="slide-note">Photo placeholder</span>
+        </div>
+      </div>
+      <div class="gallery-slide">
+        <div class="slide-ph" style="--c1:#4FA8DE;--c2:#17608F;">
+          <svg class="cam-ic" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 1 1 16 0"/><path d="M4 12v3a2 2 0 0 0 2 2h1M20 12v3a2 2 0 0 1-2 2h-1"/></svg>
+          <span class="slide-title">Treatment Room</span>
+          <span class="slide-note">Photo placeholder</span>
+        </div>
+      </div>
+      <div class="gallery-slide">
+        <div class="slide-ph" style="--c1:#3E92CB;--c2:#134F76;">
+          <svg class="cam-ic" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          <span class="slide-title">Sterilization &amp; Equipment</span>
+          <span class="slide-note">Photo placeholder</span>
+        </div>
+      </div>
+    </div>
+    <div class="gallery-progress">
+      <div class="track-line"><div class="bar" id="galleryBar"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="section-head" style="margin-bottom:0;">
+        <h2>A real neighbourhood clinic, not a big impersonal chain.</h2>
+      </div>
+      <div class="about-copy" style="margin-top:22px;">
+        <p>Pauline &amp; Ng Dental Clinic has been quietly looking after smiles in Taman Subang Mewah — the kind of clinic where the dentist remembers your last visit and explains every step before doing it.</p>
+        <p>Patients consistently mention the same things: gentle hands, clear explanations with photos of your own teeth, and follow-up messages checking in after treatment. It's dentistry that feels personal, in a spot you can walk or drive to in minutes.</p>
+      </div>
+      <div class="locate-line">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        39, Jalan USJ 1/1a, Taman Subang Mewah, 47620 Subang Jaya, Selangor
+      </div>
+    </div>
+
+    <div class="feature-grid reveal">
+      <div class="feature-card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+        <h4>Gentle &amp; unhurried</h4>
+        <p>No rushing — every step is explained before it happens.</p>
+      </div>
+      <div class="feature-card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+        <h4>Music while you're treated</h4>
+        <p>Play your own playlist to stay relaxed during procedures.</p>
+      </div>
+      <div class="feature-card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <h4>Transparent pricing</h4>
+        <p>You'll know the cost upfront — no surprises at checkout.</p>
+      </div>
+      <div class="feature-card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+        <h4>Personal follow-up care</h4>
+        <p>Aftercare check-ins and tips sent after treatment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section id="services">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <h2>Dental care for every stage of life</h2>
+      <p>From a child's first check-up to grandparents' dentures — general dentistry, handled with care.</p>
+    </div>
+
+    <div class="services-grid reveal-stagger">
+      <div class="service-tile">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+        <h4>Check-up &amp; Scaling</h4>
+        <p>Routine exams and professional cleaning to keep problems away.</p>
+      </div>
+      <div class="service-tile">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20l9-9-9-9-9 9 9 9z"/><path d="M12 8v8M8 12h8"/></svg></div>
+        <h4>Fillings &amp; Restorations</h4>
+        <p>Comfortable treatment for cavities and worn teeth.</p>
+      </div>
+      <div class="service-tile">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-6 0v4"/><path d="M5 9h14l-1.5 9.5A3 3 0 0 1 14.5 21h-5a3 3 0 0 1-3-2.5L5 9z"/></svg></div>
+        <h4>Tooth Extraction</h4>
+        <p>Wisdom teeth and problem extractions, done gently.</p>
+      </div>
+      <div class="service-tile">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 1 1 16 0"/><path d="M4 12v3a2 2 0 0 0 2 2h1M20 12v3a2 2 0 0 1-2 2h-1"/></svg></div>
+        <h4>Braces</h4>
+        <p>Orthodontic treatment for kids, teens and adults.</p>
+      </div>
+      <div class="service-tile">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+        <h4>Root Canal Treatment</h4>
+        <p>Save an infected tooth and relieve the pain, painlessly.</p>
+      </div>
+      <div class="service-tile">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg></div>
+        <h4>Teeth Whitening</h4>
+        <p>Brighten your smile with a safe, dentist-guided treatment.</p>
+      </div>
+      <div class="service-tile">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="10" rx="2"/><path d="M7 8V6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/></svg></div>
+        <h4>Dentures</h4>
+        <p>Comfortable, natural-looking replacements for missing teeth.</p>
+      </div>
+      <div class="service-tile">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9M19.1 4.9c3.9 3.9 3.9 10.2 0 14.2M7.8 16.2a6 6 0 0 1 0-8.5M16.2 7.8a6 6 0 0 1 0 8.5"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/></svg></div>
+        <h4>Emergency Dental Care</h4>
+        <p>In pain? Message us on WhatsApp for the next available slot.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DOCTORS ================= -->
+<section class="doctors" id="doctors">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>Meet the dentists</h2>
+      <p>The two names behind every appointment — familiar faces you'll see visit after visit.</p>
+    </div>
+
+    <div class="doctor-grid reveal">
+      <div class="doctor-card">
+        <div class="doctor-avatar p">P</div>
+        <h3>Dr. Pauline</h3>
+        <div class="role">Dentist &amp; Co-Founder</div>
+        <p class="bio">Known by patients for calm, careful teeth cleaning and check-ups, Dr. Pauline takes the time to walk through what she sees and why — so nothing feels like a surprise.</p>
+        <div class="doctor-tags">
+          <span>General Dentistry</span>
+          <span>Preventive Care</span>
+          <span>Family Patients</span>
+        </div>
+      </div>
+      <div class="doctor-card">
+        <div class="doctor-avatar n">CY</div>
+        <h3>Dr. Chee Yang</h3>
+        <div class="role">Dentist &amp; Co-Founder</div>
+        <p class="bio">Patients highlight Dr. Chee Yang's clear photo-guided explanations and steady, painless technique for scaling, extractions and children's orthodontic cases.</p>
+        <div class="doctor-tags">
+          <span>Restorative Care</span>
+          <span>Extractions</span>
+          <span>Braces / Orthodontics</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= REVIEWS ================= -->
+<section id="reviews">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <h2>What patients are saying</h2>
+      <p>4.9 out of 5, based on 79 reviews on Google — a few of the recurring themes, in their own words.</p>
+    </div>
+
+    <div class="review-grid reveal-stagger">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>Clean, calming and aesthetic clinic — the doctor talked me through every step of my extraction and filling, and the pricing was clear from the start.</p>
+        <div class="review-who"><span class="dot">NF</span> Nur Farhana M.</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>Never rushed, always explained clearly. The clinic itself is spotless and comfortable, which made a nervous visit much easier to get through.</p>
+        <div class="review-who"><span class="dot">WH</span> Wee Heng T.</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>Got to pick my own music during a tooth extraction to help me relax — and they followed up afterwards to check how I was recovering.</p>
+        <div class="review-who"><span class="dot">JL</span> J. Lim</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>Brought my daughter in for braces treatment and the dentist was patient with her the whole time. Modern equipment, very clean facility.</p>
+        <div class="review-who"><span class="dot">SK</span> S. Kumar</div>
+      </div>
+    </div>
+
+    <div class="review-source reveal">
+      <a href="https://wa.me/60163403382" target="_blank">See more reviews on Google →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LOCATION ================= -->
+<section class="location" id="location">
+  <div class="wrap">
+    <div class="loc-card reveal">
+      <div>
+        <h3>Find us in Taman Subang Mewah</h3>
+        <div class="loc-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><strong>Address</strong>39, Jalan USJ 1/1a, Taman Subang Mewah, 47620 Subang Jaya, Selangor</div>
+        </div>
+        <div class="loc-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <div><strong>Phone / WhatsApp</strong>+60 16-340 3382</div>
+        </div>
+        <div class="loc-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <div><strong>Hours</strong>Message us on WhatsApp to check today's opening hours &amp; next available slot.</div>
+        </div>
+      </div>
+      <a href="https://wa.me/60163403382?text=Hi%20Pauline%20%26%20Ng%20Dental%20Clinic%2C%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" class="btn btn-primary" style="margin-top:28px; justify-content:center;">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A8.86 8.86 0 0 0 12.05 4a8.94 8.94 0 0 0-7.75 13.4L3 21l3.7-1.28a8.9 8.9 0 0 0 4.35 1.13h.02a8.94 8.94 0 0 0 6.53-15.53zM12.05 19.5a7.4 7.4 0 0 1-3.78-1.04l-.27-.16-2.8.97.94-2.73-.18-.28a7.44 7.44 0 1 1 13.85-3.85 7.4 7.4 0 0 1-7.76 7.09z"/></svg>
+        Book on WhatsApp
+      </a>
+    </div>
+    <div class="map-frame reveal">
+      <iframe src="https://www.google.com/maps?q=39,+Jalan+USJ+1/1a,+Taman+Subang+Mewah,+47620+Subang+Jaya,+Selangor&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
+<section class="final-cta">
+  <div class="wrap reveal">
+    <h2>Toothache, check-up, or just overdue for a visit?</h2>
+    <p>Send us a message on WhatsApp — no forms, no hold music, just a real reply from the clinic.</p>
+    <div class="cta-row">
+      <a href="https://wa.me/60163403382?text=Hi%20Pauline%20%26%20Ng%20Dental%20Clinic%2C%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" class="btn btn-light">
+        <svg viewBox="0 0 24 24" fill="#25D366"><path d="M17.6 6.32A8.86 8.86 0 0 0 12.05 4a8.94 8.94 0 0 0-7.75 13.4L3 21l3.7-1.28a8.9 8.9 0 0 0 4.35 1.13h.02a8.94 8.94 0 0 0 6.53-15.53zM12.05 19.5a7.4 7.4 0 0 1-3.78-1.04l-.27-.16-2.8.97.94-2.73-.18-.28a7.44 7.44 0 1 1 13.85-3.85 7.4 7.4 0 0 1-7.76 7.09z"/></svg>
+        Message on WhatsApp
+      </a>
+      <a href="tel:+60163403382" class="btn btn-ghost" style="color:#fff; border-color:rgba(255,255,255,0.3);">Call +60 16-340 3382</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="logo">
+        <img class="logo-mark" src="assets/logo.jpg" alt="Pauline & Ng Dental Clinic logo">
+        <span class="logo-text">
+          <strong>Pauline &amp; Ng Dental Clinic</strong>
+          <span>USJ1, Subang Jaya · Selangor</span>
+        </span>
+      </div>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#doctors">Dentists</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#location">Location</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Pauline &amp; Ng Dental Clinic. All rights reserved.</span>
+      <span>39, Jalan USJ 1/1a, Taman Subang Mewah, 47620 Subang Jaya, Selangor</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= FLOATING WHATSAPP ================= -->
+<a href="https://wa.me/60163403382?text=Hi%20Pauline%20%26%20Ng%20Dental%20Clinic%2C%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" class="float-wa" aria-label="Book on WhatsApp">
+  <div class="ring"></div>
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A8.86 8.86 0 0 0 12.05 4a8.94 8.94 0 0 0-7.75 13.4L3 21l3.7-1.28a8.9 8.9 0 0 0 4.35 1.13h.02a8.94 8.94 0 0 0 6.53-15.53zM12.05 19.5a7.4 7.4 0 0 1-3.78-1.04l-.27-.16-2.8.97.94-2.73-.18-.28a7.44 7.44 0 1 1 13.85-3.85 7.4 7.4 0 0 1-7.76 7.09zm4.1-5.57c-.22-.11-1.3-.64-1.5-.72s-.35-.11-.5.11-.58.72-.7.86-.26.16-.48.05a6.1 6.1 0 0 1-1.8-1.11 6.7 6.7 0 0 1-1.24-1.55c-.13-.22 0-.34.1-.45s.22-.26.33-.39a1.5 1.5 0 0 0 .22-.37.4.4 0 0 0 0-.39c-.06-.11-.5-1.2-.68-1.65s-.36-.37-.5-.38h-.43a.82.82 0 0 0-.6.28 2.5 2.5 0 0 0-.78 1.86c0 1.1.8 2.16.91 2.31s1.58 2.41 3.83 3.38a12.9 12.9 0 0 0 1.28.47 3.08 3.08 0 0 0 1.41.09c.43-.06 1.3-.53 1.48-1.05s.19-.96.13-1.05-.2-.15-.42-.26z"/></svg>
+</a>
+
+<script>
+  // Header scroll shadow
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 12);
+  });
+
+  // Mobile menu toggle
+  const burgerBtn = document.getElementById('burgerBtn');
+  const navLinks = document.getElementById('navLinks');
+  burgerBtn.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    burgerBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      burgerBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal, .reveal-stagger');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  revealEls.forEach(el => io.observe(el));
+
+  // Count-up stats
+  const counters = document.querySelectorAll('[data-count]');
+  const countIO = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const target = parseFloat(el.getAttribute('data-count'));
+      const decimals = parseInt(el.getAttribute('data-decimal') || '0');
+      const duration = 1200;
+      const start = performance.now();
+      function tick(now){
+        const p = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - p, 3);
+        const val = target * eased;
+        el.textContent = decimals ? val.toFixed(decimals) : Math.round(val);
+        if (p < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+      countIO.unobserve(el);
+    });
+  }, { threshold: 0.6 });
+  counters.forEach(el => countIO.observe(el));
+  // Horizontal scroll-jack gallery
+  const gallerySection = document.getElementById('gallery');
+  const galleryTrack = document.getElementById('galleryTrack');
+  const galleryBar = document.getElementById('galleryBar');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const isMobile = window.matchMedia('(max-width:700px)').matches;
+
+  if (gallerySection && galleryTrack && !reduceMotion && !isMobile) {
+    function updateGallery(){
+      const rect = gallerySection.getBoundingClientRect();
+      const total = gallerySection.offsetHeight - window.innerHeight;
+      let progress = total > 0 ? -rect.top / total : 0;
+      progress = Math.max(0, Math.min(1, progress));
+      const maxScroll = Math.max(0, galleryTrack.scrollWidth - galleryTrack.parentElement.clientWidth + 28);
+      galleryTrack.style.transform = `translateX(-${progress * maxScroll}px)`;
+      if (galleryBar) galleryBar.style.width = (progress * 100) + '%';
+    }
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(() => { updateGallery(); ticking = false; });
+        ticking = true;
+      }
+    }, { passive: true });
+    window.addEventListener('resize', updateGallery);
+    updateGallery();
+  }
+</script>
+
+</body>
+</html>
